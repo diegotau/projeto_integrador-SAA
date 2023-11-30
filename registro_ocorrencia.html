@@ -6,7 +6,7 @@
 		<meta name="author" content="Francisco Diego - Ronan - Agis - Samara"/>
 		<meta name="keywords" content="acompanhamento, ifb, aluno, registro, ocorrências"/>
 		<meta name="description" content="Sistema de Acompanhamento do Aluno é uma aplicação para registro de ocorrências.">
-        <link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
 	<body>
         <section class="tela">
@@ -15,29 +15,29 @@
             </header>
             <section id="boas_vindas">
                 <h1 id="h1_index">Turma "X"</h1>
-                <h3 id="h3_boas_vindas">Selecione uma ocorrência e</h3>
-                <h3 id="h3_boas_vindas">selecione um ou mais alunos que deseja atribuir</h3>
+                <h3 id="h3_boas_vindas">Selecione uma ou mais ocorrências e</h3>
+                <h3 id="h3_boas_vindas">selecione uma ou mais alunos que deseja atribuir</h3>
             </section>
             <nav>
-                <h4>Selecione a ocorrência:</h4>
+                <h4>Selecione a(s) ocorrência(s):</h4>
                 <section>
-                    <a href="#" target="">
-                        <button class="button_link">Sem uniforme</button>
+                    <a href="#" onclick="selecionarBotao(this);" target="">
+                        <button class="button_link" data-ocorrencia="Sem uniforme">Sem uniforme</button>
                     </a>
-                    <a href="#" target="">
-                        <button class="button_link">Atraso</button>
+                    <a href="#" onclick="selecionarBotao(this);" target="">
+                        <button class="button_link" data-ocorrencia="Atraso">Atraso</button>
                     </a>
-                    <a href="#" target="">
-                        <button class="button_link">Não fez a atividade</button>
+                    <a href="#" onclick="selecionarBotao(this);" target="">
+                        <button class="button_link" data-ocorrencia="Não fez a atividade">Não fez a atividade</button>
                     </a>
-                    <a href="#" target="">
-                        <button class="button_link">Saiu da sala</button>
+                    <a href="#" onclick="selecionarBotao(this);" target="">
+                        <button class="button_link" data-ocorrencia="Saiu da sala">Saiu da sala</button>
                     </a>
-                    <a href="#" target="">
-                        <button class="button_link">Atrapalhando a aula</button>
+                    <a href="#" onclick="selecionarBotao(this);" target="">
+                        <button class="button_link" data-ocorrencia="Atrapalhando a aula">Atrapalhando a aula</button>
                     </a>
-                    <a href="#" target="">
-                        <button class="button_link">Dificuldade no aprendizado</button>
+                    <a href="#" onclick="selecionarBotao(this);" target="">
+                        <button class="button_link" data-ocorrencia="Dificuldade no aprendizado">Dificuldade no aprendizado</button>
                     </a>
                 </section>
                 <h4>Selecione o(s) aluno(s):</h4>
@@ -47,7 +47,7 @@
                     </div>
                 </section>
                 <section>
-                    <a href="#" target="">
+                    <a href="#" onclick="atribuirOcorrencias();" target="">
                         <button class="button_atribuir">Atribuir ocorrência</button>
                     </a>
                 </section>
@@ -57,5 +57,35 @@
                 <p>2023</p>
             </footer>
         </section>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                var urlParams = new URLSearchParams(window.location.search);
+                var turma = urlParams.get('turma');
+                document.getElementById('h1_index').innerText = 'Turma ' + turma;
+            });
+
+            function selecionarBotao(elemento) {
+                // Adiciona ou remove a classe 'selected' ao botão clicado
+                elemento.querySelector('.button_link').classList.toggle('selected');
+            }
+
+            function atribuirOcorrencias() {
+                // Obtém todos os botões de ocorrência
+                var botoes = document.querySelectorAll('.button_link');
+
+                // Filtra apenas os botões selecionados
+                var ocorrenciasSelecionadas = Array.from(botoes).filter(function(botao) {
+                    return botao.classList.contains('selected');
+                });
+
+                // Exibe as ocorrências selecionadas (pode ser adaptado conforme sua lógica de atribuição)
+                var ocorrenciasNomes = ocorrenciasSelecionadas.map(function(botao) {
+                    return botao.getAttribute('data-ocorrencia');
+                });
+
+                // Exemplo: Mostra as ocorrências selecionadas no console
+                console.log('Ocorrências selecionadas:', ocorrenciasNomes);
+            }
+        </script>
 	</body>
 </html>
