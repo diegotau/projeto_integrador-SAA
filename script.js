@@ -14,7 +14,6 @@ function validarEmail() {
         alert('Por favor, digite um e-mail válido.');
         return false;
     }
-
     return true;
 }
 
@@ -22,7 +21,9 @@ function validarEmail() {
 document.addEventListener('DOMContentLoaded', function () {
     var urlParams = new URLSearchParams(window.location.search);
     var turma = urlParams.get('turma');
-    document.getElementById('h1_index').innerText = 'Turma ' + turma;
+    if (turma) {
+        document.getElementById('h1_index').innerText = 'Turma ' + turma;
+    }
 });
 
 function selecionarBotao(elemento) {
