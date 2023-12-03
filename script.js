@@ -44,3 +44,13 @@ function atribuirOcorrencias() {
     console.log('Ocorrências selecionadas:', ocorrenciasNomes);
 }
 
+function confirmarOperacao() {
+    // Exibe um alerta com a opção "Tem certeza que deseja realizar essa operação?"
+    var confirmacao = confirm("Tem certeza que deseja realizar essa operação?");
+
+    // Verifica se o usuário clicou em "Sim"
+    if (confirmacao) {
+        // Exibe um alerta com "Operação feita com sucesso"
+        alert("Operação feita com sucesso");
+    }
+}
