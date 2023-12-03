@@ -14,6 +14,11 @@ function validarEmail() {
         alert('Por favor, digite um e-mail válido.');
         return false;
     }
+
+    // Adiciona um alerta de "Login feito com sucesso!" se o e-mail for válido
+    alert('Login feito com sucesso!');
+
+    // Retorna true para permitir o redirecionamento para "selecao_curso.html"
     return true;
 }
 
