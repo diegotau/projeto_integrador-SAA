@@ -19,7 +19,7 @@
             <h3 id="h3_boas_vindas">selecione uma ou mais alunos que deseja atribuir</h3>
         </section>
         <nav>
-            <h4>Selecione a(s) ocorrência(s):</h4>
+            <h4>Selecione a ocorrência:</h4>
             <section>
                 <a href="#" onclick="selecionarBotao(this);" target="">
                     <button class="button_link" data-ocorrencia="Sem uniforme">Sem uniforme</button>
@@ -28,16 +28,19 @@
                     <button class="button_link" data-ocorrencia="Atraso">Atraso</button>
                 </a>
                 <a href="#" onclick="selecionarBotao(this);" target="">
-                    <button class="button_link" data-ocorrencia="Não fez a atividade">Não fez a atividade</button>
+                    <button class="button_link" data-ocorrencia="Desrespeito">Desrespeito</button>
                 </a>
                 <a href="#" onclick="selecionarBotao(this);" target="">
-                    <button class="button_link" data-ocorrencia="Saiu da sala">Saiu da sala</button>
+                    <button class="button_link" data-ocorrencia="Saiu da sala">Saiu sem permissão da sala</button>
                 </a>
                 <a href="#" onclick="selecionarBotao(this);" target="">
                     <button class="button_link" data-ocorrencia="Atrapalhando a aula">Atrapalhando a aula</button>
                 </a>
                 <a href="#" onclick="selecionarBotao(this);" target="">
                     <button class="button_link" data-ocorrencia="Dificuldade no aprendizado">Dificuldade no aprendizado</button>
+                </a>
+                <a href="#" onclick="selecionarBotao(this);" target="">
+                    <button class="button_link" data-ocorrencia="Agressão verbal ou fisica">Agressão verbal ou física</button>
                 </a>
             </section>
             <h4>Selecione o(s) aluno(s):</h4>
@@ -47,8 +50,8 @@
                 </div>
             </section>
             <section>
-                <a href="#" onclick="atribuirOcorrencias();" target="">
-                    <button class="button_atribuir">Atribuir ocorrência</button>
+                <a href="#" target="">
+                    <button class="button_atribuir" onclick="confirmarOperacao()">Atribuir ocorrência</button>
                 </a>
             </section>
         </nav>

@@ -14,6 +14,11 @@ function validarEmail() {
         alert('Por favor, digite um e-mail válido.');
         return false;
     }
+
+    // Adiciona um alerta de "Login feito com sucesso!" se o e-mail for válido
+    alert('Login feito com sucesso!');
+
+    // Retorna true para permitir o redirecionamento para "selecao_curso.html"
     return true;
 }
 
@@ -44,3 +49,13 @@ function atribuirOcorrencias() {
     console.log('Ocorrências selecionadas:', ocorrenciasNomes);
 }
 
+function confirmarOperacao() {
+    // Exibe um alerta com a opção "Tem certeza que deseja realizar essa operação?"
+    var confirmacao = confirm("Tem certeza que deseja realizar essa operação?");
+
+    // Verifica se o usuário clicou em "Sim"
+    if (confirmacao) {
+        // Exibe um alerta com "Operação feita com sucesso"
+        alert("Operação feita com sucesso");
+    }
+}
