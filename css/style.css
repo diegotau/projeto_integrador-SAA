@@ -200,3 +200,34 @@ h4{
     font: 1.5vw 'Roboto', sans-serif;
     cursor: pointer;
 }
+
+.buscar{
+    position: relative;
+}
+
+#listaAlunos{
+    display: none;
+    width: 95%;
+    list-style-type: none;
+    margin-left: 8px;
+    padding: 0;
+    position: absolute;
+}
+
+#listaAlunos li a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    border: 1px solid #ddd;
+    background-color: #f6f6f6;
+    padding: 2px;
+}
+
+#listaAlunos li a:hover{
+    background: #eee;
+}
+
+.item-name{
+    margin-left: 7px;
+}
