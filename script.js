@@ -118,3 +118,30 @@ function filtrar(){
 }
 
 /*=============================================================================================*/
+/*===================SCRIPT ADICIONAR ALUNOS - PÁGINA REGISTRO DE OCORRÊNCIAS==================*/
+
+function selecionarAluno(){
+    var input,
+    alunos,
+    a,
+    ul,
+    li,
+    i,
+    textarea
+    //PEGAR OS ELEMENTOS DO HTML
+    input = document.getElementById('nome_aluno');
+    textarea = document.getElementById("alunos_selecionados");
+    //PEGAR TODAS AS LI's DA LISTA
+    ul = document.getElementById('listaAlunos');
+    //PEGAR TODAS AS LI's DA LISTA
+    li = ul.getElementsByTagName("li");
+    //PEGAR A TAG A DO ELEMENTO 0 
+    a = li[0].getElementsByTagName("a")[0];  //pega o index 0. precisa buscar o index do LI clicado
+    //PEGAR O TEXTO DENTRO DA NOSSA TAG A
+    alunos = a.textContent || a.innerText;
+    //Adicionar valor ao textarea
+    textarea.value = textarea.value + alunos + "\n";
+    //limpar input
+    input.value = "";
+    ul.style.display = "none";
+}

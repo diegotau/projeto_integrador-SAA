@@ -48,17 +48,18 @@
                 <div class="buscar">
                     <input onkeyup="filtrar()" class="form-control" id="nome_aluno" type="text" name="nome_aluno" placeholder="Nome do aluno" />
                     <ul id="listaAlunos">
-                        <li><a href="#"><span class="item-name">Brenda Rezende</span></a></li>
-                        <li><a href="#"><span class="item-name">Cecília Moreira</span></a></li>
-                        <li><a href="#"><span class="item-name">Daniel Monteiro</span></a></li>
-                        <li><a href="#"><span class="item-name">João Vitor das Neves</span></a></li>
-                        <li><a href="#"><span class="item-name">Leandro Pereira</span></a></li>
-                        <li><a href="#"><span class="item-name">Letícia Castro</span></a></li>
-                        <li><a href="#"><span class="item-name">Manuela Rocha</span></a></li>
-                        <li><a href="#"><span class="item-name">Paulo da Conceição</span></a></li>
-                        <li><a href="#"><span class="item-name">Rodrigo Martins</span></a></li>
-                        <li><a href="#"><span class="item-name">Ryan Pires</span></a></li>
+                        <li><a onclick="selecionarAluno()"  href="#"><span class="item-name" name="item-name">Brenda Rezende</span></a></li>
+                        <li><a onclick="selecionarAluno()" href="#"><span class="item-name" name="item-name">Cecília Moreira</span></a></li>
+                        <li><a onclick="selecionarAluno()" href="#"><span class="item-name" name="item-name">Daniel Monteiro</span></a></li>
+                        <li><a onclick="selecionarAluno()" href="#"><span class="item-name" name="item-name">João Vitor das Neves</span></a></li>
+                        <li><a onclick="selecionarAluno()" href="#"><span class="item-name" name="item-name">Leandro Pereira</span></a></li>
+                        <li><a onclick="selecionarAluno()" href="#"><span class="item-name" name="item-name">Letícia Castro</span></a></li>
+                        <li><a onclick="selecionarAluno()" href="#"><span class="item-name" name="item-name">Manuela Rocha</span></a></li>
+                        <li><a onclick="selecionarAluno()" href="#"><span class="item-name" name="item-name">Paulo da Conceição</span></a></li>
+                        <li><a onclick="selecionarAluno()" href="#"><span class="item-name" name="item-name">Rodrigo Martins</span></a></li>
+                        <li><a onclick="selecionarAluno()" href="#"><span class="item-name" name="item-name">Ryan Pires</span></a></li>
                     </ul>
+                    <textarea id="alunos_selecionados" cols="" rows="" readonly></textarea>
                 </div>
             </section>
             <section>
