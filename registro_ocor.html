@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Sistema de Acompanhamento do Aluno</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Francisco Diego - Ronan - Agis - Samara"/>
+    <meta name="keywords" content="acompanhamento, ifb, aluno, registro, ocorrências"/>
+    <meta name="description" content="Sistema de Acompanhamento do Aluno é uma aplicação para registro de ocorrências.">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <section class="tela">
+        <header>
+            <img id="img_logo" src="img/IFB.png" alt="Logo do Instituto Federal Campus Brasília."/>
+        </header>
+        <section id="boas_vindas">
+            <h1 id="h1_index">Turma "X"</h1>
+            <h3 id="h3_boas_vindas">Selecione uma ou mais ocorrências e</h3>
+            <h3 id="h3_boas_vindas">selecione uma ou mais alunos que deseja atribuir</h3>
+        </section>
+        <nav>
+            <h4>Selecione a ocorrência:</h4>
+            <section>
+                <a href="#" onclick="selecionarBotao(this);" target="">
+                    <button class="button_link" data-ocorrencia="Sem uniforme">Sem uniforme</button>
+                </a>
+                <a href="#" onclick="selecionarBotao(this);" target="">
+                    <button class="button_link" data-ocorrencia="Atraso">Atraso</button>
+                </a>
+                <a href="#" onclick="selecionarBotao(this);" target="">
+                    <button class="button_link" data-ocorrencia="Desrespeito">Desrespeito</button>
+                </a>
+                <a href="#" onclick="selecionarBotao(this);" target="">
+                    <button class="button_link" data-ocorrencia="Saiu da sala">Saiu sem permissão da sala</button>
+                </a>
+                <a href="#" onclick="selecionarBotao(this);" target="">
+                    <button class="button_link" data-ocorrencia="Atrapalhando a aula">Atrapalhando a aula</button>
+                </a>
+                <a href="#" onclick="selecionarBotao(this);" target="">
+                    <button class="button_link" data-ocorrencia="Dificuldade no aprendizado">Dificuldade no aprendizado</button>
+                </a>
+                <a href="#" onclick="selecionarBotao(this);" target="">
+                    <button class="button_link" data-ocorrencia="Agressão verbal ou fisica">Agressão verbal ou física</button>
+                </a>
+            </section>
+            <h4>Selecione o(s) aluno(s):</h4>
+            <section>
+                <div class="buscar">
+                    <input onkeyup="filtrar()" class="form-control" id="nome_aluno" type="text" name="nome_aluno" placeholder="Nome do aluno" />
+                    <label for="alunos" class="form-control" id="nome_aluno" type="text" name="nome_aluno" placeholder="Nome do aluno">Selecione o(s) aluno(s):</label>
+                        <select id="alunos" multiple>
+                            <option value="#">Selecione os alunos</option>
+                            <option value="Brenda Rezende">Brenda Rezende</option>
+                            <option value="Cecília Moreira">Cecília Moreira</option>
+                            <option value="Daniel Monteiro">Daniel Monteiro</option>
+                            <option value="João Vitor das Neves">João Vitor das Neves</option>
+                            <option value="Leandro Pereira">Leandro Pereira</option>
+                            <option value="Letícia Castro">Letícia Castro</option>
+                            <option value="Manuela Rocha">Manuela Rocha</option>
+                            <option value="Paulo da Conceição">Paulo da Conceição</option>
+                            <option value="Rodrigo Martins">Rodrigo Martins</option>
+                            <option value="Ryan Pires">Ryan Pires</option>
+                            <!-- Adicione outras opções conforme necessário -->
+</select>
+                    <textarea id="alunos_selecionados" cols="" rows="" readonly></textarea>
+                </div>
+            </section>
+            <section>
+                <a href="#" target="">
+                    <button class="button_atribuir" onclick="confirmarOperacao()">Atribuir ocorrência</button>
+                </a>
+            </section>
+        </nav>
+        <footer>
+            <p>Desenvolvido por: Agis - Francisco Diego - Ronan - Samara</p>
+            <p>2023</p>
+        </footer>
+    </section>
+    <script src="script2.js"></script>
+</body>
+</html>
