@@ -145,3 +145,4 @@ function selecionarAluno(){
     input.value = "";
     ul.style.display = "none";
 }
+

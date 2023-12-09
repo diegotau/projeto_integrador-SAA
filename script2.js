@@ -1,3 +1,5 @@
+
+
 //Validação do email no index.html
 function validarEmail() {
     var emailInput = document.getElementById('email');
@@ -169,6 +171,53 @@ function exibirAlunosSelecionados(alunos) {
     div.innerHTML = '';
 
     for (var i = 0; i < alunos.length; i++) {
-        div.innerHTML += alunos[i] + '<br>';
+        div.innerHTML += alunos[i] + ';';
     }
+}
+
+
+
+//-------------------atribuindo os valores dos campos anteriores no botão submit
+function confirmarOperacao() {
+    var emailUsuario;
+   
+    //- buscando os dados do input e-mail
+    document.addEventListener('DOMContentLoaded', function () {
+        var emailInput = document.getElementById('email');
+        emailUsuario = emailInput ? emailInput.value : null;
+});
+
+    // Coletar os dados dos campos
+    var usuario = emailUsuario;
+    var turma = document.getElementById('h1_index').textContent;
+    var ocorrencia = document.querySelector('.button_link.selected').getAttribute('data-ocorrencia');
+    var alunosSelecionados = document.getElementById('alunos_selecionados').value;
+
+    // Construir o objeto com os dados
+    var dados = {
+        usuario: usuario,
+        turma: turma,
+        ocorrencia: ocorrencia,
+        alunos: alunosSelecionados
+    };
+
+    // Realizar a requisição POST usando Fetch API
+    fetch('https://api.sheetmonkey.io/form/45zAwiZCdTNBZeRn3y5ZmC', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(dados)
+    })
+    .then(response => response.json())
+    .then(data => {
+        // Exibir mensagem de sucesso ou tratar a resposta conforme necessário
+        console.log('Resposta da API:', data);
+        alert('Operação feita com sucesso');
+    })
+    .catch(error => {
+        // Tratar erros de requisição
+        console.error('Erro na requisição:', error);
+        alert('Erro ao processar a operação');
+    });
 }
