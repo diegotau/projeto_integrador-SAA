@@ -21,6 +21,32 @@ function validarEmail() {
     // Retorna true para permitir o redirecionamento para "selecao_curso.html"
     return true;
 }
+/*========================== Sequencia de Escolhas ========================*/
+
+function selecionarCurso(curso) {
+    window.location.href = `selecao_serie.html?curso=${encodeURIComponent(curso)}`;
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    var urlParams = new URLSearchParams(window.location.search);
+    var curso = urlParams.get('curso');
+    if (curso) {
+        document.getElementById('curso_escolhido').innerText = `Curso: ${decodeURIComponent(curso)}`;
+    }
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    var urlParams = new URLSearchParams(window.location.search);
+    var curso = urlParams.get('curso');
+    var ano = urlParams.get('ano');
+
+    if (curso !== null && ano !== null) {
+        document.getElementById('escolhas_anteriores').innerText = `Curso: ${decodeURIComponent(curso)}, ${decodeURIComponent(ano)}º Ano`;
+        document.getElementById('curso_escolhido').innerText = `${decodeURIComponent(curso)}, ${decodeURIComponent(ano)}º Ano`;
+    }
+});
+
+/*==========================  Fim Sequencia de Escolhas ========================*/
 
 //Busca a Turma na seção turma para registro de ocorrências 
 document.addEventListener('DOMContentLoaded', function () {

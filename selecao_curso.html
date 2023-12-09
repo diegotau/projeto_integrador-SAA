@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-	<head>
-		<title>Sistema de Acompanhamento do Aluno</title>
-		<meta charset="utf-8" />
-		<meta name="author" content="Francisco Diego - Ronan - Agis - Samara"/>
-		<meta name="keywords" content="acompanhamento, ifb, aluno, registro, ocorrências"/>
-		<meta name="description" content="Sistema de Acompanhamento do Aluno é uma aplicação para registro de ocorrências.">
+    <head>
+        <title>Sistema de Acompanhamento do Aluno</title>
+        <meta charset="utf-8" />
+        <meta name="author" content="Francisco Diego - Ronan - Agis - Samara"/>
+        <meta name="keywords" content="acompanhamento, ifb, aluno, registro, ocorrências"/>
+        <meta name="description" content="Sistema de Acompanhamento do Aluno é uma aplicação para registro de ocorrências.">
         <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
-	<body>
+    <body>
         <section class="tela">
             <header>
                 <img id="img_logo" src="img/IFB.png" alt="Logo do Instituto Federal Campus Brasília."/>
@@ -19,12 +19,8 @@
             </section>
             <nav>
                 <section>
-                    <a href="selecao_serie.html" target="">
-                        <button class="button_link" name="Técnico em Eventos">Técnico em Eventos</button>
-                    </a>
-                    <a href="selecao_serie.html" target="">
-                        <button class="button_link" name="Técnico em Informática">Técnico em Informática</button>
-                    </a>
+                    <button class="button_link" onclick="selecionarCurso('Técnico em Eventos')">Técnico em Eventos</button>
+                    <button class="button_link" onclick="selecionarCurso('Técnico em Informática')">Técnico em Informática</button>
                 </section>
             </nav>
             <footer>
@@ -32,5 +28,8 @@
                 <p>2023</p>
             </footer>
         </section>
-	</body>
+
+        <script src="script.js"></script>
+
+    </body>
 </html>
