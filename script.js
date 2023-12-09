@@ -82,7 +82,7 @@ function confirmarOperacao() {
     // Verifica se o usuário clicou em "Sim"
     if (confirmacao) {
         // Exibe um alerta com "Operação feita com sucesso"
-        alert("Operação feita com sucesso");
+        alert("Operação feita com sucesso! Caso queira detalhar sua ocorrência, encaminhe email para:cdmi.cbra@ifb.edu.br");
     }
 }
 
