@@ -111,10 +111,10 @@ function filtrar(){
 
     //PERCORRER TODOS OS LI's
     for(i = 0; i < li.length; i++) {
-        //PEGAR A TAG A DO ELEMENTO PERCORRIDO
-        a = li[i].getElementsByTagName("a")[0];
-        //PEGAR O TEXTO DENTRO DA NOSSA TAG A
-        txtValue = a.textContent || a.innerText;
+        //PEGAR A TAG SPAN DO ELEMENTO PERCORRIDO
+        span = li[i].getElementsByTagName("span")[0];
+        //PEGAR O TEXTO DENTRO DA NOSSA TAG span
+        txtValue = span.textContent || span.innerText;
         //VERIFICAR SE O QUE O USUÁRIO DIGITOU BATE COM O TEXTO DA TAG P
         if(txtValue.toUpperCase().indexOf(filter) > -1) {
             //VALOR BATEU
@@ -149,11 +149,13 @@ function filtrar(){
 function selecionarAluno(){
     var input,
     alunos,
-    a,
+    span,
     ul,
     li,
     i,
-    textarea
+    textarea,
+    tab = [],
+    index
     //PEGAR OS ELEMENTOS DO HTML
     input = document.getElementById('nome_aluno');
     textarea = document.getElementById("alunos_selecionados");
@@ -161,14 +163,26 @@ function selecionarAluno(){
     ul = document.getElementById('listaAlunos');
     //PEGAR TODAS AS LI's DA LISTA
     li = ul.getElementsByTagName("li");
-    //PEGAR A TAG A DO ELEMENTO 0 
-    a = li[0].getElementsByTagName("a")[0];  //pega o index 0. precisa buscar o index do LI clicado
-    //PEGAR O TEXTO DENTRO DA NOSSA TAG A
-    alunos = a.textContent || a.innerText;
-    //Adicionar valor ao textarea
-    textarea.value = textarea.value + alunos + "\n";
-    //limpar input
-    input.value = "";
-    ul.style.display = "none";
+    
+
+    //CAPTURAR TEXTO DO LI CLICADO E LANÇAR NA CAIXA DE TEXTO
+    for (var i = 0; i< li.length; i++){
+        tab.push(li[i].innerHTML);
+    }
+
+    for (var i = 0; i< li.length; i++){
+        li[i].onclick = function(){
+            index=tab.indexOf(this.innerHTML);
+            //PEGAR A TAG SPAN DO ELEMENTO 0 
+            span = li[index].getElementsByTagName("span")[0];  //pega o index 0. precisa buscar o index do LI clicado
+            //PEGAR O TEXTO DENTRO DA NOSSA TAG SPAN
+            alunos = span.textContent || span.innerText;
+            //Adicionar valor ao textarea
+            textarea.value = textarea.value + alunos + "\n";
+            //limpar input
+            input.value = "";
+            ul.style.display = "none";
+        }
+    }
 }
 
