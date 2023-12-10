@@ -149,40 +149,25 @@ function filtrar(){
 function selecionarAluno(){
     var input,
     alunos,
-    span,
+    item_clicado,
     ul,
     li,
-    i,
-    textarea,
-    tab = [],
-    index
-    //PEGAR OS ELEMENTOS DO HTML
+    input,
+    textarea
     input = document.getElementById('nome_aluno');
     textarea = document.getElementById("alunos_selecionados");
-    //PEGAR TODAS AS LI's DA LISTA
     ul = document.getElementById('listaAlunos');
-    //PEGAR TODAS AS LI's DA LISTA
-    li = ul.getElementsByTagName("li");
-    
-
-    //CAPTURAR TEXTO DO LI CLICADO E LANÇAR NA CAIXA DE TEXTO
-    for (var i = 0; i< li.length; i++){
-        tab.push(li[i].innerHTML);
-    }
-
-    for (var i = 0; i< li.length; i++){
-        li[i].onclick = function(){
-            index=tab.indexOf(this.innerHTML);
-            //PEGAR A TAG SPAN DO ELEMENTO 0 
-            span = li[index].getElementsByTagName("span")[0];  //pega o index 0. precisa buscar o index do LI clicado
-            //PEGAR O TEXTO DENTRO DA NOSSA TAG SPAN
-            alunos = span.textContent || span.innerText;
-            //Adicionar valor ao textarea
-            textarea.value = textarea.value + alunos + "\n";
-            //limpar input
-            input.value = "";
-            ul.style.display = "none";
+    li = document.getElementById("listaAlunos");
+    li.addEventListener('click', function(event) {
+        event.preventDefault();
+        item_clicado = (event.target); // este é o elemento clicado
+        alunos = item_clicado.textContent;
+        //Adicionar valor ao textarea
+        textarea.value = textarea.value + alunos + "\n";
+        //limpar input
+        input.value = "";
+        ul.style.display = "none";
+        window.location.reload();
         }
-    }
+    )
 }
-
