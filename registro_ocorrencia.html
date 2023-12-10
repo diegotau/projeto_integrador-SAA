@@ -15,34 +15,10 @@
         </header>
         <section id="boas_vindas">
             <h1 id="h1_index">Turma "X"</h1>
-            <h3 id="h3_boas_vindas">Selecione a ocorrência e</h3>
-            <h3 id="h3_boas_vindas">um ou mais alunos que deseja atribuí-la</h3>
+            <h3 id="h3_boas_vindas">Selecione um ou mais alunos e</h3>
+            <h3 id="h3_boas_vindas">a ocorrência que deseja atribuir</h3>
         </section>
         <nav>
-            <h4>Selecione a ocorrência:</h4>
-            <section>
-                <a href="#" onclick="selecionarBotao(this);" target="">
-                    <button class="button_link" data-ocorrencia="Sem uniforme">Sem uniforme</button>
-                </a>
-                <a href="#" onclick="selecionarBotao(this);" target="">
-                    <button class="button_link" data-ocorrencia="Atraso">Atraso</button>
-                </a>
-                <a href="#" onclick="selecionarBotao(this);" target="">
-                    <button class="button_link" data-ocorrencia="Desrespeito">Desrespeito</button>
-                </a>
-                <a href="#" onclick="selecionarBotao(this);" target="">
-                    <button class="button_link" data-ocorrencia="Saiu da sala">Saiu sem permissão da sala</button>
-                </a>
-                <a href="#" onclick="selecionarBotao(this);" target="">
-                    <button class="button_link" data-ocorrencia="Atrapalhando a aula">Atrapalhando a aula</button>
-                </a>
-                <a href="#" onclick="selecionarBotao(this);" target="">
-                    <button class="button_link" data-ocorrencia="Dificuldade no aprendizado">Dificuldade no aprendizado</button>
-                </a>
-                <a href="#" onclick="selecionarBotao(this);" target="">
-                    <button class="button_link" data-ocorrencia="Agressão verbal ou fisica">Agressão verbal ou física</button>
-                </a>
-            </section>
             <h4>Selecione o(s) aluno(s):</h4>
             <section>
                 <div class="buscar">
@@ -61,6 +37,29 @@
                     </ul>
                     <textarea id="alunos_selecionados" cols="" rows="" readonly></textarea>
                 </div>
+            </section>
+            <h4>Selecione a ocorrência:</h4>
+            <section>
+                <a href="#" onclick="selecionarBotao(this);" target="">
+                    <button onclick="selecionarBotao(this);" class="button_link" data-ocorrencia="Sem uniforme">Sem uniforme</button>
+                <a href="#" onclick="selecionarBotao(this);" target="">
+                    <button class="button_link" data-ocorrencia="Atraso">Atraso</button>
+                </a>
+                <a href="#" onclick="selecionarBotao(this);" target="">
+                    <button class="button_link" data-ocorrencia="Desrespeito">Desrespeito</button>
+                </a>
+                <a href="#" onclick="selecionarBotao(this);" target="">
+                    <button class="button_link" data-ocorrencia="Saiu da sala">Saiu sem permissão da sala</button>
+                </a>
+                <a href="#" onclick="selecionarBotao(this);" target="">
+                    <button class="button_link" data-ocorrencia="Atrapalhando a aula">Atrapalhando a aula</button>
+                </a>
+                <a href="#" onclick="selecionarBotao(this);" target="">
+                    <button class="button_link" data-ocorrencia="Dificuldade no aprendizado">Dificuldade no aprendizado</button>
+                </a>
+                <a href="#" onclick="selecionarBotao(this);" target="">
+                    <button class="button_link" data-ocorrencia="Agressão verbal ou fisica">Agressão verbal ou física</button>
+                </a>
             </section>
             <section>
                 <a href="#" target="">
