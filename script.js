@@ -91,10 +91,11 @@ function confirmarOperacao() {
 
     // Verifica se o usuário clicou em "Sim"
     if (confirmacao) {
-        // Exibe um alerta com "Operação feita com sucesso"
-        alert("Operação feita com sucesso! Caso queira detalhar sua ocorrência, encaminhe email para:cdmi.cbra@ifb.edu.br");
+        // Redireciona para a página 'registro_confirmado.html'
+        window.location.href = 'registro_confirmado.html';
     }
 }
+
 
 
 /*==========================SCRIPT DE BUSCA PÁGINA REGISTRO DE OCORRÊNCIAS========================*/
