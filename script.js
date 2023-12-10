@@ -57,8 +57,18 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
+//Marca a Ocorrência selecionada
 function selecionarBotao(elemento) {
-    elemento.querySelector('.button_link').classList.toggle('selected');
+    var botoes = document.querySelectorAll('.button_link');
+
+    // Desmarcar todas as ocorrências
+    botoes.forEach(function(botao) {
+        botao.classList.remove('selected');
+    });
+
+    // Marcar a ocorrência selecionada
+    var ocorrenciaSelecionada = elemento.querySelector('.button_link');
+    ocorrenciaSelecionada.classList.add('selected');
 }
 
 function atribuirOcorrencias() {
