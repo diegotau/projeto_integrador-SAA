@@ -159,7 +159,7 @@ function filtrar(){
 
 function selecionarAluno(){
     var input,
-    alunos,
+    alunos = "global",
     item_clicado,
     ul,
     li,
@@ -170,15 +170,13 @@ function selecionarAluno(){
     ul = document.getElementById('listaAlunos');
     li = document.getElementById("listaAlunos");
     li.addEventListener('click', function(event) {
-        event.preventDefault();
         item_clicado = (event.target); // este é o elemento clicado
         alunos = item_clicado.textContent;
         //Adicionar valor ao textarea
-        textarea.value = textarea.value + alunos + "\n";
+        textarea.value = alunos + "\n";
         //limpar input
         input.value = "";
         ul.style.display = "none";
-        window.location.reload();
         }
     )
 }
