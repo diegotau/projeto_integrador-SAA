@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var urlParams = new URLSearchParams(window.location.search);
     var turma = urlParams.get('turma');
     if (turma) {
-        document.getElementById('h1_index').innerText = 'Turma ' + turma;
+        document.getElementById('turma_escolhida').innerText = 'Turma ' + turma;
     }
 });
 
@@ -206,7 +206,7 @@ function confirmarOperacao2() {
     let email = document.querySelector('#email.form-control');
     let curso = document.querySelector('#curso');
     let serie = document.querySelector('#serie');
-    var turma = document.getElementById('h1_index').textContent;
+    var turma = document.getElementById('turma_escolhida').textContent;
     var ocorrencia = document.querySelector('.button_link.selected').getAttribute('data-ocorrencia');
     var alunos = document.getElementById('alunos_selecionados').value;
 

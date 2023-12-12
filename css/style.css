@@ -44,6 +44,10 @@ h3{
     font: 4.5vw 'Roboto 900', sans-serif;
 }
 
+#turma_escolhida{
+    font: 4.5vw 'Roboto 900', sans-serif;
+}
+
 #h3_boas_vindas{
     font: 1.7vw 'Roboto', sans-serif;
 }
@@ -172,6 +176,10 @@ footer{
 }
 
 /*===========Pag: registro_ocorrencia===================*/
+
+h5{
+    display: none;
+}
 
 h4{
     margin-top: 1vw;
