@@ -203,9 +203,9 @@ class registro{
 //----------------Realizar a requisição POST usando Fetch API
 function confirmarOperacao2() {
     // Coletar os dados dos campos
-    let email = document.querySelector('#email.form-control');
-    let curso = document.querySelector('#curso');
-    let serie = document.querySelector('#serie');
+    let email = document.querySelector('#email_selecionado').textContent;
+    let curso = document.querySelector('#curso_selecionado').textContent;
+    let serie = document.querySelector('#serie_selecionada').textContent;
     var turma = document.getElementById('turma_escolhida').textContent;
     var ocorrencia = document.querySelector('.button_link.selected').getAttribute('data-ocorrencia');
     var alunos = document.getElementById('alunos_selecionados').value;
