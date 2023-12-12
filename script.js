@@ -18,6 +18,9 @@ function validarEmail() {
     // Adiciona um alerta de "Login feito com sucesso!" se o e-mail for válido
     alert('Login feito com sucesso!');
 
+    // Armazena o e-mail no localStorage ---------------------------------------------------------------
+    localStorage.setItem('emailArmazenado', email);
+
     // Retorna true para permitir o redirecionamento para "selecao_curso.html"
     return true;
 }
@@ -179,4 +182,71 @@ function selecionarAluno(){
         ul.style.display = "none";
         }
     )
+}
+
+//-----funções para capturar os dados das informações em outras páginas - index.html(email), Selecao_curso.html(curso), selecao_serie.html(serie)
+class registro{
+    construtor(email, curso, serie, turma, ocorrencia, alunos){
+        this.email = email;
+        this.curso = curso;
+        this.serie = serie;
+        this.turma = turma;
+        this.ocorrencia = ocorrencia;
+        this.alunos = alunos;
+    }
+}
+
+//Seletores
+
+
+
+//----------------Realizar a requisição POST usando Fetch API
+function confirmarOperacao2() {
+    // Coletar os dados dos campos
+    let email = document.querySelector('#email.form-control');
+    let curso = document.querySelector('#curso');
+    let serie = document.querySelector('#serie');
+    var turma = document.getElementById('h1_index').textContent;
+    var ocorrencia = document.querySelector('.button_link.selected').getAttribute('data-ocorrencia');
+    var alunos = document.getElementById('alunos_selecionados').value;
+
+    // Construir o objeto com os dados
+    var dados = {
+        email: email,
+        curso: curso,
+        serie: serie,
+        turma: turma,
+        ocorrencia: ocorrencia,
+        alunos: alunos
+    };
+
+    // Realizar a requisição POST usando Fetch API
+    fetch('https://api.sheetmonkey.io/form/45zAwiZCdTNBZeRn3y5ZmC', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(dados)
+    })
+    .then(data => {
+        // Lógica para manipular a resposta da API
+        console.log('Resposta da API:', data);
+    })
+    .then(response => {
+        if (!response.ok) {
+            window.location.href = 'registro_confirmado.html';
+        }
+        return response.json();
+    })
+    .then(data => {
+        // Lógica para manipular os dados JSON, se necessário
+        console.log('Dados JSON:', data);
+        // Redirecionar para a página de inclusão
+        window.location.href = 'registro_confirmado.html';
+    })
+    .catch(error => {
+        // Tratar erros de requisição
+        console.error('Registro Efetuado:', error);
+        window.location.href = 'registro_confirmado.html';
+    });
 }

@@ -6,9 +6,7 @@
     <meta name="author" content="Francisco Diego - Ronan - Agis - Samara"/>
     <meta name="keywords" content="acompanhamento, ifb, aluno, registro, ocorrências"/>
     <meta name="description" content="Sistema de Acompanhamento do Aluno é uma aplicação para registro de ocorrências.">
-    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    
 </head>
 <body>
     <section class="tela">
@@ -45,7 +43,7 @@
                 <a href="#" onclick="selecionarBotao(this);" target="">
                     <button onclick="selecionarBotao(this);" class="button_link" data-ocorrencia="Sem uniforme">Sem uniforme</button>
                 <a href="#" onclick="selecionarBotao(this);" target="">
-                    <button class="button_link" data-ocorrencia="Atraso" name="created">Atraso</button>
+                    <button class="button_link" data-ocorrencia="Atraso">Atraso</button>
                 </a>
                 <a href="#" onclick="selecionarBotao(this);" target="">
                     <button class="button_link" data-ocorrencia="Desrespeito">Desrespeito</button>
@@ -60,12 +58,12 @@
                     <button class="button_link" data-ocorrencia="Dificuldade no aprendizado">Dificuldade no aprendizado</button>
                 </a>
                 <a href="#" onclick="selecionarBotao(this);" target="">
-                    <button class="button_link" data-ocorrencia="Agressão verbal ou fisica" >Agressão verbal ou física</button>
+                    <button class="button_link" data-ocorrencia="Agressão verbal ou fisica">Agressão verbal ou física</button>
                 </a>
             </section>
             <section>
-                <a href="#" target="" name="created">
-                    <button class="button_atribuir" onclick="confirmarOperacao2();">Atribuir ocorrência</button>
+                <a href="#" target="">
+                    <button class="button_atribuir" onclick="confirmarOperacao();confirmarOperacao2();">Atribuir ocorrência</button>
                 </a>
             </section>
         </nav>

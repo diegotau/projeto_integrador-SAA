@@ -6,7 +6,9 @@
         <meta name="author" content="Francisco Diego - Ronan - Agis - Samara"/>
         <meta name="keywords" content="acompanhamento, ifb, aluno, registro, ocorrências"/>
         <meta name="description" content="Sistema de Acompanhamento do Aluno é uma aplicação para registro de ocorrências.">
+        <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
         <link rel="stylesheet" type="text/css" href="css/style.css">
+        
     </head>
     <body>
         <section class="tela">
@@ -22,13 +24,13 @@
                 <section>
                     <!-- Adicione "ano" como um parâmetro na URL -->
                     <a href="selecao_turma.html?curso=Técnico em Eventos&ano=1" target="">
-                        <button id='serie' class="button_link">1º Ano</button>
+                        <button class="button_link" onclick="validarSerie2(event)" name="3º Ano">1º Ano</button>
                     </a>
                     <a href="selecao_turma.html?curso=Técnico em Informática&ano=2" target="">
-                        <button id='serie' class="button_link" name="2º Ano">2º Ano</button>
+                        <button class="button_link" onclick="validarSerie2(event)" name="3º Ano">2º Ano</button>
                     </a>
                     <a href="selecao_turma.html?curso=Técnico em Eventos&ano=3" target="">
-                        <button id='serie' class="button_link">3º Ano</button>
+                        <button class="button_link" onclick="validarSerie2(event)" name="3º Ano">3º Ano</button>
                     </a>
                 </section>
             </nav>
