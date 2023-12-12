@@ -178,7 +178,7 @@ footer{
 /*===========Pag: registro_ocorrencia===================*/
 
 h5{
-    display: none;
+    display: block;
 }
 
 h4{

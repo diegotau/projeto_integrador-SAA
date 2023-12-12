@@ -24,30 +24,73 @@ function validarEmail() {
     // Retorna true para permitir o redirecionamento para "selecao_curso.html"
     return true;
 }
+/*============== Alteração de subtitulo da página Curso ====================*/
+function subtitulo_curso(){
+    const subtitulo_email = localStorage.getItem('emailArmazenado');
+    document.getElementById('email_selecionado').innerText = ('E-mail de registro:' + subtitulo_email);
+}
+/*============== Alteração de subtitulo da página Serie ====================*/
+function subtitulo_serie(){
+    const subtitulo_email = localStorage.getItem('emailArmazenado');
+    document.getElementById('email_selecionado').innerText = ('E-mail de registro:' + subtitulo_email);
+    const subtitulo_curso = localStorage.getItem('cursoArmazenado');
+    document.getElementById('curso_selecionado').innerText = ('Curso:' + subtitulo_curso);
+}
+/*============== Alteração de subtitulo da página Turma ====================*/
+function subtitulo_turma(){
+    const subtitulo_email = localStorage.getItem('emailArmazenado');
+    document.getElementById('email_selecionado').innerText = ('E-mail de registro:' + subtitulo_email);
+    const subtitulo_curso = localStorage.getItem('cursoArmazenado');
+    document.getElementById('curso_selecionado').innerText = ('Curso:' + subtitulo_curso);
+    const subtitulo_serie = localStorage.getItem('serieArmazenada');
+    document.getElementById('serie_selecionada').innerText = ('Série: ' + subtitulo_serie);
+}
+/*============== Alteração de subtitulo da página Ocorrências ====================*/
+
+function subtitulo_ocorrencia(){
+    const subtitulo_email = localStorage.getItem('emailArmazenado');
+    document.getElementById('email_selecionado').innerText = ('E-mail de registro:' + subtitulo_email);
+    const subtitulo_curso = localStorage.getItem('cursoArmazenado');
+    document.getElementById('curso_selecionado').innerText = ('Curso:' + subtitulo_curso);
+    const subtitulo_serie = localStorage.getItem('serieArmazenada');
+    document.getElementById('serie_selecionada').innerText = ('Série: ' + subtitulo_serie);
+}
 /*========================== Sequencia de Escolhas ========================*/
 
 function selecionarCurso(curso) {
     window.location.href = `selecao_serie.html?curso=${encodeURIComponent(curso)}`;
+    localStorage.setItem('cursoArmazenado', curso);
 }
 
-document.addEventListener('DOMContentLoaded', function () {
+/*document.addEventListener('DOMContentLoaded', function () {
     var urlParams = new URLSearchParams(window.location.search);
     var curso = urlParams.get('curso');
     if (curso) {
         document.getElementById('curso_escolhido').innerText = `Curso: ${decodeURIComponent(curso)}`;
     }
-});
+});*/
 
-document.addEventListener('DOMContentLoaded', function () {
-    var urlParams = new URLSearchParams(window.location.search);
-    var curso = urlParams.get('curso');
-    var ano = urlParams.get('ano');
+    document.addEventListener('DOMContentLoaded', function () {
+        var urlParams = new URLSearchParams(window.location.search);
+        var curso = urlParams.get('curso');
+        var ano = urlParams.get('serie');
+        const serie = "";
+        if (ano=="1ºano"){
+            const serie = ("1º Ano");
+            localStorage.setItem('serieArmazenada', serie);
+        }else if(ano=="2ºano"){
+            const serie = ("2º Ano");
+            localStorage.setItem('serieArmazenada', serie);
+        }else{
+            const serie = ("3º Ano");
+            localStorage.setItem('serieArmazenada', serie);
+        }
 
-    if (curso !== null && ano !== null) {
-        document.getElementById('escolhas_anteriores').innerText = `Curso: ${decodeURIComponent(curso)}, ${decodeURIComponent(ano)}º Ano`;
-        document.getElementById('curso_escolhido').innerText = `${decodeURIComponent(curso)}, ${decodeURIComponent(ano)}º Ano`;
-    }
-});
+        /*if (curso !== null && ano !== null) {
+            document.getElementById('escolhas_anteriores').innerText = `Curso: ${decodeURIComponent(curso)}, ${decodeURIComponent(ano)}º Ano`;
+            document.getElementById('curso_escolhido').innerText = `${decodeURIComponent(curso)}, ${decodeURIComponent(ano)}º Ano`;
+        }*/
+    });
 
 /*==========================  Fim Sequencia de Escolhas ========================*/
 

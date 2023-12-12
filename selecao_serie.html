@@ -10,7 +10,7 @@
         <link rel="stylesheet" type="text/css" href="css/style.css">
         
     </head>
-    <body>
+    <body onload="subtitulo_serie();">
         <section class="tela">
             <header>
                 <img id="img_logo" src="img/IFB.png" alt="Logo do Instituto Federal Campus Brasília."/>
@@ -25,14 +25,14 @@
             <nav>
                 <section>
                     <!-- Adicione "ano" como um parâmetro na URL -->
-                    <a href="selecao_turma.html?curso=Técnico em Eventos&ano=1" target="">
-                        <button class="button_link" onclick="validarSerie2(event)" name="3º Ano">1º Ano</button>
+                    <a href="selecao_turma.html?serie=1ºano" target="">
+                        <button class="button_link" onclick="selecionarSerie()" name="1º Ano">1º Ano</button>
                     </a>
-                    <a href="selecao_turma.html?curso=Técnico em Informática&ano=2" target="">
-                        <button class="button_link" onclick="validarSerie2(event)" name="3º Ano">2º Ano</button>
+                    <a href="selecao_turma.html?serie=2ºano" target="">
+                        <button class="button_link" onclick="selecionarSerie()" name="2º Ano">2º Ano</button>
                     </a>
-                    <a href="selecao_turma.html?curso=Técnico em Eventos&ano=3" target="">
-                        <button class="button_link" onclick="validarSerie2(event)" name="3º Ano">3º Ano</button>
+                    <a href="selecao_turma.html?serie=3ºano" target="">
+                        <button class="button_link" onclick="selecionarSerie()" name="3º Ano">3º Ano</button>
                     </a>
                 </section>
             </nav>
