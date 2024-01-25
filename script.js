@@ -253,6 +253,10 @@ function confirmarOperacao2() {
     var ocorrencia = document.querySelector('.button_link.selected').getAttribute('data-ocorrencia');
     var alunos = document.getElementById('alunos_selecionados').value;
 
+
+    // obter a data atual
+    var dataAtual = new Date();
+
     // Construir o objeto com os dados
     var dados = {
         email: email,
@@ -260,7 +264,8 @@ function confirmarOperacao2() {
         serie: serie,
         turma: turma,
         ocorrencia: ocorrencia,
-        alunos: alunos
+        alunos: alunos,
+        dataRegistro: dataAtual
     };
 
     // Realizar a requisição POST usando Fetch API
