@@ -3,25 +3,34 @@
 *{margin: 0; padding: 0;}
 
 body {
-    background-color: #F2F2F2;
-    
+    background-color: #f61c1c;
+    margin: auto;
+    width: 50vh;
+    height: 90vh;
 }
 
 #email{
     font-size: medium;
     color:#223820;
+    width: 40vh;
+    height: auto;
+    justify-items: center;
+    align-items: center;
+    margin: 10px 10px 1px 10px;
+    
+  
 }
 .tela{
     display: flex;
     flex-direction: column;
-    background-color: white;
-    width: 30vw;
-    height: auto;
+    background-color: rgb(249, 248, 251);
+    width: auto;
+    height: 50vh;
     margin: 0px auto;
 }
 
 header{
-    width: 100%;
+    width: auto;
 	height: 15vw;
 }
 
@@ -36,7 +45,7 @@ h3{
 }
 
 #boas_vindas{
-    width: 100%;
+    width: auto;
 	height: 12vw;
     text-align: center;
 }
@@ -107,13 +116,15 @@ label {
     width: 28vw;
     height: 3vw;
     padding: 0.5vw 1vw;
-    margin: 0.7vw;
+    margin: 2vw;
+    margin-left: 28vw;
     background-color: #36963F;
     border: none;
     border-radius: 5px;
     box-shadow: 2px 2px 2px black;
     color: white;
     font: 1.5vw 'Roboto', sans-serif;
+    
 }
 
 .button_link:hover{
