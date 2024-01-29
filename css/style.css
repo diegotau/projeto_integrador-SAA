@@ -3,35 +3,33 @@
 *{margin: 0; padding: 0;}
 
 body {
-    background-color: #f9f6f6;
+    background-color: #bcf444;
     margin: auto;
     width: 50vh;
     height: 90vh;
 }
 
 #email{
+    /*background-color: #36963F;*/
     font-size: medium;
     color:#223820;
     width: 40vh;
-    height: auto;
-    justify-items: center;
-    align-items: center;
-    margin: 10px 10px 1px 10px;
-    
+    height: auto;  
   
 }
 .tela{
     display: flex;
     flex-direction: column;
     background-color: rgb(249, 248, 251);
-    width: auto;
-    height: 50vh;
+    width: 60vh;
+    height: 80vh;
     margin: 0px auto;
 }
 
 header{
-    width: auto;
+    width: 15vw;
 	height: 15vw;
+    margin-left: 11vw;
 }
 
 #img_logo{
@@ -68,8 +66,9 @@ h3{
 }
 
 nav{
-    flex: 1 1 0;
-    width: 17vw;
+    background-color: aqua;
+    flex: 1 1 1;
+    width: auto;
     text-align: center;
     padding: 5px;
 }
@@ -83,6 +82,7 @@ input{
 
 .textOnInput {
     position: relative;
+    width: auto;
 }
 .textOnInput label {
     position: absolute;
@@ -117,7 +117,7 @@ label {
     height: 3vw;
     padding: 0.5vw 1vw;
     margin: 2vw;
-    margin-left: 28vw;
+    margin-left: 5vw;
     background-color: #36963F;
     border: none;
     border-radius: 5px;
@@ -273,34 +273,4 @@ h4{
 
 
 
-/*------------@Media -------------------------*/
-
-@media screen and (min-width: 1366px) and (min-height: 768px) {
-    .tela {
-        width: 100%; /* Ajustando a largura para ocupar toda a largura da tela */
-        height: auto; /* Definindo a altura como automática para se ajustar ao conteúdo */
-        margin: 0; /* Removendo as margens laterais */
-    }
-
-    nav {
-        width: 100%; /* Ajustando a largura para ocupar toda a largura da tela */
-    }
-
-    input {
-        width: 100%; /* Ajustando a largura para ocupar toda a largura da tela */
-    }
-
-    .button_link,
-    .button_serie,
-    .button_atribuir {
-        width: 100%; /* Ajustando a largura para ocupar toda a largura da tela */
-    }
-
-    #alunos_selecionados {
-        width: 100%; /* Ajustando a largura para ocupar toda a largura da tela */
-    }
-
-    #listaAlunos {
-        width: 100%; /* Ajustando a largura para ocupar toda a largura da tela */
-    }
-}
+/*media query*/
