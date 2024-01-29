@@ -4,8 +4,7 @@
 
 body {
     background-color: #F2F2F2;
-    width: 30vw;
-    height: auto;
+    
 }
 
 #email{
@@ -265,7 +264,7 @@ h4{
 
 /*------------@Media -------------------------*/
 
-@media screen and (max-width: 1366px) and (max-height: 768px) {
+@media screen and (min-width: 1366px) and (min-height: 768px) {
     .tela {
         width: 100%; /* Ajustando a largura para ocupar toda a largura da tela */
         height: auto; /* Definindo a altura como automática para se ajustar ao conteúdo */
